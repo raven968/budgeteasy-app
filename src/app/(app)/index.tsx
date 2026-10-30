@@ -44,6 +44,8 @@ export default function HomeScreen() {
           <ThemedText tone="muted">{t('budgets.monthlyBudget')}</ThemedText>
           <ThemedText variant="title">{formatMoney(activeBudget.amount, activeBudget.currency)}</ThemedText>
           <ThemedText tone="muted">{t('budgets.summaryComingSoon')}</ThemedText>
+          <Button title={t('expenses.new')} onPress={() => router.push('/expenses/new')} />
+          <Button title={t('expenses.viewAll')} variant="outline" onPress={() => router.push('/expenses')} />
           <Button title={t('budgets.change')} variant="outline" onPress={() => router.push('/budgets')} />
         </Card>
       ) : (

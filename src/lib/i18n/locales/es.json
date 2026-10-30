@@ -125,5 +125,43 @@
       "title": "¿Eliminar categoría?",
       "message": "\"{{name}}\" dejará de estar disponible para gastos nuevos. Los gastos anteriores la conservan."
     }
+  },
+  "expenses": {
+    "title": "Gastos",
+    "new": "Registrar gasto",
+    "edit": "Editar gasto",
+    "save": "Guardar gasto",
+    "viewAll": "Ver gastos",
+    "empty": "No hay gastos en este mes.",
+    "deletedUser": "Usuario eliminado",
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "fields": {
+      "amount": "Monto ({{currency}})",
+      "category": "Categoría",
+      "date": "Fecha",
+      "note": "Nota (opcional)",
+      "notePlaceholder": "Ej. Despensa semanal"
+    },
+    "dates": {
+      "today": "Hoy",
+      "yesterday": "Ayer",
+      "other": "Otra fecha"
+    },
+    "filters": {
+      "onlyMine": "Solo míos"
+    },
+    "validation": {
+      "category": "Elige una categoría."
+    },
+    "noCategories": {
+      "title": "Faltan categorías",
+      "owner": "Para registrar gastos primero crea al menos una categoría.",
+      "member": "El dueño de este presupuesto aún no crea categorías. Pídele que agregue algunas."
+    },
+    "delete": {
+      "title": "¿Eliminar gasto?",
+      "message": "Esta acción no se puede deshacer."
+    }
   }
 }

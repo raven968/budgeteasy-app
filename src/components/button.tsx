@@ -11,9 +11,18 @@ type ButtonProps = {
   variant?: 'primary' | 'outline' | 'ghost';
   isLoading?: boolean;
   disabled?: boolean;
+  /** Spoken label when the title is a symbol, e.g. "‹". */
+  accessibilityLabel?: string;
 };
 
-export function Button({ title, onPress, variant = 'primary', isLoading = false, disabled = false }: ButtonProps) {
+export function Button({
+  title,
+  onPress,
+  variant = 'primary',
+  isLoading = false,
+  disabled = false,
+  accessibilityLabel,
+}: ButtonProps) {
   const theme = useTheme();
   const isDisabled = disabled || isLoading;
   const variantStyle = {
@@ -25,6 +34,7 @@ export function Button({ title, onPress, variant = 'primary', isLoading = false,
   return (
     <Pressable
       accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel}
       accessibilityState={{ disabled: isDisabled, busy: isLoading }}
       disabled={isDisabled}
       onPress={onPress}

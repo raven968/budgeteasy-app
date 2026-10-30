@@ -33,6 +33,8 @@ Mobile app (Expo SDK 58, React Native, TypeScript) for BudgetEasy: shared budget
 - Tests: `@testing-library/react-native` 14 is async — always `await render(...)`, `await renderHook(...)` and `await fireEvent.*(...)`. Query by accessible label/role (`getByLabelText`, `getByRole`).
 - The React Compiler is on: use `useWatch` (not `watch()`) from react-hook-form, and avoid manual `useMemo`/`useCallback`.
 - Icons: `expo-symbols` (`SymbolView`) with per-platform names (SF Symbols on iOS, Material Symbols on Android). Category icons/colors come from `src/features/categories/catalog.ts`; the API stores the catalog key.
+- Dates: `src/lib/dates.ts` builds local `YYYY-MM-DD` / `YYYY-MM` strings; never `toISOString()` for calendar dates (UTC shifts the day). Date picking with `@expo/ui/community/datetime-picker`.
+- Navigation during render: use `<Redirect href=... />`, never `router.*` calls in the render body.
 - Money input goes through `src/lib/money.ts` (`parseMoneyInput` to cents without float errors, `formatMoney` with Intl).
 - TypeScript 6 does not load `@types/*` automatically: add new global type packages to `compilerOptions.types` in `tsconfig.json`.
 

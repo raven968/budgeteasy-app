@@ -125,5 +125,43 @@
       "title": "Delete category?",
       "message": "\"{{name}}\" won't be available for new expenses. Past expenses keep it."
     }
+  },
+  "expenses": {
+    "title": "Expenses",
+    "new": "Add expense",
+    "edit": "Edit expense",
+    "save": "Save expense",
+    "viewAll": "View expenses",
+    "empty": "No expenses this month.",
+    "deletedUser": "Deleted user",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "fields": {
+      "amount": "Amount ({{currency}})",
+      "category": "Category",
+      "date": "Date",
+      "note": "Note (optional)",
+      "notePlaceholder": "e.g. Weekly groceries"
+    },
+    "dates": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "other": "Other date"
+    },
+    "filters": {
+      "onlyMine": "Only mine"
+    },
+    "validation": {
+      "category": "Choose a category."
+    },
+    "noCategories": {
+      "title": "No categories yet",
+      "owner": "Create at least one category before adding expenses.",
+      "member": "The owner of this budget hasn't created categories yet. Ask them to add some."
+    },
+    "delete": {
+      "title": "Delete expense?",
+      "message": "This can't be undone."
+    }
   }
 }
