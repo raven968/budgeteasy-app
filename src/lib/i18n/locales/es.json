@@ -173,5 +173,44 @@
     "unusedCategories_one": "{{count}} categoría sin gastos",
     "unusedCategories_other": "{{count}} categorías sin gastos",
     "you": "{{name}} (tú)"
+  },
+  "sharing": {
+    "title": "Compartir {{budget}}",
+    "manage": "Compartir",
+    "join": {
+      "title": "Unirme a un presupuesto",
+      "button": "Unirme con un código",
+      "explanation": "Pídele al dueño del presupuesto un código de invitación y escríbelo aquí.",
+      "code": "Código de invitación",
+      "submit": "Unirme",
+      "invalidCode": "El código tiene 6 letras y números, por ejemplo ABC234."
+    },
+    "invite": {
+      "title": "Invitar a alguien",
+      "explanation": "Genera un código y compártelo. Sirve una sola vez y vence en 48 horas.",
+      "generate": "Generar código de invitación",
+      "regenerate": "Generar otro código",
+      "regenerateHint": "Al generar uno nuevo, el código anterior deja de funcionar.",
+      "share": "Compartir código",
+      "codeLabel": "Código {{code}}",
+      "expiresAt": "Vence el {{date}}",
+      "shareMessage": "Únete a mi presupuesto \"{{budget}}\" en BudgetEasy con el código {{code}}. Vence el {{expiresAt}}."
+    },
+    "members": {
+      "title_one": "{{count}} miembro",
+      "title_other": "{{count}} miembros",
+      "owner": "Dueño",
+      "member": "Miembro",
+      "remove": "Quitar",
+      "removeLabel": "Quitar a {{name}}",
+      "removeTitle": "¿Quitar a {{name}}?",
+      "removeMessage": "Dejará de ver \"{{budget}}\". Los gastos que registró se conservan.",
+      "confirm": "Quitar"
+    },
+    "leave": {
+      "button": "Salir del presupuesto",
+      "title": "¿Salir del presupuesto?",
+      "message": "Dejarás de ver \"{{budget}}\". Los gastos que registraste se conservan."
+    }
   }
 }

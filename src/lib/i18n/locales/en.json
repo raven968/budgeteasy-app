@@ -173,5 +173,44 @@
     "unusedCategories_one": "{{count}} category without expenses",
     "unusedCategories_other": "{{count}} categories without expenses",
     "you": "{{name}} (you)"
+  },
+  "sharing": {
+    "title": "Share {{budget}}",
+    "manage": "Share",
+    "join": {
+      "title": "Join a budget",
+      "button": "Join with a code",
+      "explanation": "Ask the budget owner for an invitation code and type it here.",
+      "code": "Invitation code",
+      "submit": "Join",
+      "invalidCode": "The code has 6 letters and numbers, e.g. ABC234."
+    },
+    "invite": {
+      "title": "Invite someone",
+      "explanation": "Generate a code and share it. It works once and expires in 48 hours.",
+      "generate": "Generate invitation code",
+      "regenerate": "Generate another code",
+      "regenerateHint": "Generating a new one disables the previous code.",
+      "share": "Share code",
+      "codeLabel": "Code {{code}}",
+      "expiresAt": "Expires {{date}}",
+      "shareMessage": "Join my budget \"{{budget}}\" on BudgetEasy with the code {{code}}. It expires {{expiresAt}}."
+    },
+    "members": {
+      "title_one": "{{count}} member",
+      "title_other": "{{count}} members",
+      "owner": "Owner",
+      "member": "Member",
+      "remove": "Remove",
+      "removeLabel": "Remove {{name}}",
+      "removeTitle": "Remove {{name}}?",
+      "removeMessage": "They will no longer see \"{{budget}}\". The expenses they added are kept.",
+      "confirm": "Remove"
+    },
+    "leave": {
+      "button": "Leave budget",
+      "title": "Leave budget?",
+      "message": "You will no longer see \"{{budget}}\". The expenses you added are kept."
+    }
   }
 }

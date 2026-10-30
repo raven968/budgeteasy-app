@@ -39,6 +39,7 @@ export default function HomeScreen() {
           <ThemedText variant="subtitle">{t('budgets.empty.title')}</ThemedText>
           <ThemedText tone="muted">{t('budgets.empty.message')}</ThemedText>
           <Button title={t('budgets.create')} onPress={() => router.push('/budgets/new')} />
+          <Button title={t('sharing.join.button')} variant="outline" onPress={() => router.push('/budgets/join')} />
         </Card>
         <Button title={t('auth.signOut')} variant="ghost" onPress={signOut} />
       </Screen>
@@ -88,7 +89,12 @@ function BudgetHome({ budget }: { budget: Budget }) {
 
       <BudgetSummarySection summaryQuery={summaryQuery} currentUserId={userId} />
 
-      <View style={{ flexDirection: 'row', justifyContent: 'center', gap: theme.spacing.sm }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: theme.spacing.sm }}>
+        <Button
+          title={t('sharing.manage')}
+          variant="ghost"
+          onPress={() => router.push({ pathname: '/budgets/[budgetId]/members', params: { budgetId: budget.id } })}
+        />
         <Button title={t('categories.manage')} variant="ghost" onPress={() => router.push('/categories')} />
         <Button title={t('auth.signOut')} variant="ghost" onPress={signOut} />
       </View>

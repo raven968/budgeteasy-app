@@ -14,9 +14,10 @@ type BudgetListItemProps = {
   isActive: boolean;
   onSelect: () => void;
   onEdit: () => void;
+  onShare: () => void;
 };
 
-export function BudgetListItem({ budget, isActive, onSelect, onEdit }: BudgetListItemProps) {
+export function BudgetListItem({ budget, isActive, onSelect, onEdit, onShare }: BudgetListItemProps) {
   const { t } = useTranslation();
   const theme = useTheme();
   const isOwner = budget.role === 'owner';
@@ -49,7 +50,10 @@ export function BudgetListItem({ budget, isActive, onSelect, onEdit }: BudgetLis
           label={isOwner ? t('budgets.roles.owner') : t('budgets.roles.member', { owner: budget.owner.name })}
           variant="outline"
         />
-        {isOwner ? <Button title={t('common.edit')} variant="ghost" onPress={onEdit} /> : null}
+        <View style={{ flexDirection: 'row' }}>
+          <Button title={t('sharing.manage')} variant="ghost" onPress={onShare} />
+          {isOwner ? <Button title={t('common.edit')} variant="ghost" onPress={onEdit} /> : null}
+        </View>
       </View>
     </Pressable>
   );

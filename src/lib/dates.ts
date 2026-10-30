@@ -62,3 +62,8 @@ export function formatShortDate(dateString: string, locale = deviceLocale()): st
     parseDateString(dateString),
   );
 }
+
+/** "31 oct 2026, 18:30" from an ISO timestamp, in local time. */
+export function formatDateTime(isoTimestamp: string, locale = deviceLocale()): string {
+  return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(isoTimestamp));
+}

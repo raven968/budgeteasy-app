@@ -35,9 +35,11 @@ export default function BudgetsScreen() {
           isActive={budget.id === activeBudget?.id}
           onSelect={() => selectAndGoBack(budget.id)}
           onEdit={() => router.push({ pathname: '/budgets/[budgetId]/edit', params: { budgetId: budget.id } })}
+          onShare={() => router.push({ pathname: '/budgets/[budgetId]/members', params: { budgetId: budget.id } })}
         />
       ))}
       <Button title={t('budgets.new')} onPress={() => router.push('/budgets/new')} />
+      <Button title={t('sharing.join.button')} variant="outline" onPress={() => router.push('/budgets/join')} />
     </Screen>
   );
 }
