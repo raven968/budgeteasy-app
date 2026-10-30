@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Package manager switched to pnpm, with `minimumReleaseAge` of 1 day as supply-chain protection.
+
 ### Added
 
 - Expo SDK 58 project with Expo Router and TypeScript.

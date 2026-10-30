@@ -1,0 +1,4 @@
+# pnpm settings for this app (single package, not a monorepo).
+
+# Supply-chain protection: don't install versions published less than 1 day ago.
+minimumReleaseAge: 1440

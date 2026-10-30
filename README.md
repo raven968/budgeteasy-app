@@ -4,24 +4,24 @@ App móvil de BudgetEasy (Expo SDK 58 · React Native · TypeScript). Convencion
 
 ## Requisitos
 
-- Node 22+
+- Node 22+ y pnpm 10 (`corepack enable` toma la versión de `packageManager`)
 - El API de BudgetEasy corriendo (repositorio `budgeteasy-api`)
 - Xcode / Android Studio para simuladores
 
 ## Instalación
 
 ```sh
-npm install
+pnpm install
 cp .env.example .env   # ajusta EXPO_PUBLIC_API_URL
-npx expo start
+pnpm expo start
 ```
 
 ## Calidad
 
 ```sh
-npm run lint
-npm run typecheck
-npm test
+pnpm lint
+pnpm typecheck
+pnpm test
 ```
 
 ## Versionado

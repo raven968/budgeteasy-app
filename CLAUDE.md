@@ -24,7 +24,11 @@ Mobile app (Expo SDK 58, React Native, TypeScript) for BudgetEasy: shared budget
 - Routes: `src/app/(auth)` for signed-out screens, `src/app/(app)` for signed-in ones, guarded in the root layout with `Stack.Protected`.
 - File names in kebab-case (`token-storage.ts`, `update-required-screen.tsx`), as in the Expo template.
 - UI strings always go through i18next (`src/lib/i18n/locales/{es,en}.json`); never hard-code user-facing text.
-- Always install packages with `npx expo install` (dev tools: `npx expo install <pkg> -- --save-dev`). Run `npm run lint`, `npm run typecheck` and `npm test` before finishing a task.
+- **Package manager: pnpm** (never npm/npx/yarn). This overrides the `npx` commands in AGENTS.md:
+  - Install: `pnpm expo install <pkg>` (dev tools: `pnpm expo install <pkg> -- --save-dev`).
+  - One-off tools: `pnpm dlx <tool>` (e.g. `pnpm dlx expo-doctor`, `pnpm dlx eas-cli@latest build`).
+  - Run before finishing a task: `pnpm lint`, `pnpm typecheck`, `pnpm test`.
+  - `pnpm-workspace.yaml` sets `minimumReleaseAge` (no versions younger than 1 day). Dependency build scripts stay blocked; approve one with `pnpm approve-builds` only if something actually breaks without it.
 - TypeScript 6 does not load `@types/*` automatically: add new global type packages to `compilerOptions.types` in `tsconfig.json`.
 
 ## API
