@@ -15,11 +15,6 @@
     "title": "Update required",
     "message": "This version of BudgetEasy ({{current}}) is no longer supported. Install version {{required}} or later to continue."
   },
-  "home": {
-    "appVersion": "App version: {{version}}",
-    "apiVersion": "API version: {{version}}",
-    "greeting": "Hi, {{name}}"
-  },
   "validation": {
     "required": "This field is required.",
     "email": "Enter a valid email address.",
@@ -61,7 +56,6 @@
     "change": "Change budget",
     "active": "Active",
     "monthlyAmount": "{{amount}} per month",
-    "monthlyBudget": "Monthly budget",
     "roles": {
       "owner": "Yours",
       "member": "Shared by {{owner}}"
@@ -80,7 +74,7 @@
       "title": "Delete budget?",
       "message": "\"{{name}}\" and its expenses will be deleted for all its members."
     },
-    "summaryComingSoon": "Your monthly summary will show up here."
+    "switch": "Switch"
   },
   "categories": {
     "title": "Categories",
@@ -163,5 +157,21 @@
       "title": "Delete expense?",
       "message": "This can't be undone."
     }
+  },
+  "summary": {
+    "spent": "Spent this month",
+    "ofBudget": "of {{amount}}",
+    "remaining": "{{amount}} left",
+    "overBudget": "Over budget by {{amount}}",
+    "percentage": "{{percentage}}%",
+    "progressLabel": "You have spent {{percentage}}% of the budget",
+    "byCategory": "By category",
+    "byMember": "By person",
+    "noSpending": "No expenses this month yet.",
+    "expensesCount_one": "{{count}} expense",
+    "expensesCount_other": "{{count}} expenses",
+    "unusedCategories_one": "{{count}} category without expenses",
+    "unusedCategories_other": "{{count}} categories without expenses",
+    "you": "{{name}} (you)"
   }
 }

@@ -15,11 +15,6 @@
     "title": "Actualización requerida",
     "message": "Esta versión de BudgetEasy ({{current}}) ya no es compatible. Instala la versión {{required}} o superior para continuar."
   },
-  "home": {
-    "appVersion": "Versión de la app: {{version}}",
-    "apiVersion": "Versión del API: {{version}}",
-    "greeting": "Hola, {{name}}"
-  },
   "validation": {
     "required": "Este campo es obligatorio.",
     "email": "Escribe un correo electrónico válido.",
@@ -61,7 +56,6 @@
     "change": "Cambiar presupuesto",
     "active": "Activo",
     "monthlyAmount": "{{amount}} al mes",
-    "monthlyBudget": "Presupuesto mensual",
     "roles": {
       "owner": "Tuyo",
       "member": "Compartido por {{owner}}"
@@ -80,7 +74,7 @@
       "title": "¿Eliminar presupuesto?",
       "message": "Se eliminará \"{{name}}\" con sus gastos para todos sus miembros."
     },
-    "summaryComingSoon": "Aquí verás el resumen del mes."
+    "switch": "Cambiar"
   },
   "categories": {
     "title": "Categorías",
@@ -163,5 +157,21 @@
       "title": "¿Eliminar gasto?",
       "message": "Esta acción no se puede deshacer."
     }
+  },
+  "summary": {
+    "spent": "Gastado este mes",
+    "ofBudget": "de {{amount}}",
+    "remaining": "Te quedan {{amount}}",
+    "overBudget": "Te pasaste por {{amount}}",
+    "percentage": "{{percentage}}%",
+    "progressLabel": "Has gastado el {{percentage}}% del presupuesto",
+    "byCategory": "Por categoría",
+    "byMember": "Por persona",
+    "noSpending": "Aún no hay gastos en este mes.",
+    "expensesCount_one": "{{count}} gasto",
+    "expensesCount_other": "{{count}} gastos",
+    "unusedCategories_one": "{{count}} categoría sin gastos",
+    "unusedCategories_other": "{{count}} categorías sin gastos",
+    "you": "{{name}} (tú)"
   }
 }

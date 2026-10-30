@@ -26,7 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Budgets: list of owned and shared budgets, create, edit and delete (owner only), and the active budget, remembered per user on the device.
 - Categories: list with the `n/10` counter, create, edit and delete; 20 icons (SF Symbols on iOS, Material Symbols on Android) and 10 Nord colors, with a live preview. Creating is disabled at the limit.
 - Expenses: quick capture (amount, category grid, Today/Yesterday or native date picker, note), monthly list grouped by day with daily totals, month navigation, "only mine" and category filters, pull to refresh and infinite scroll. Edit/delete only for the author or the budget owner. Notice when the budget has no categories.
-- Home shows the active budget or an empty state to create the first one.
+- Home is now the monthly summary of the active budget: spent vs budget with a progress bar (success under 80%, warning up to 100%, error when exceeded), remaining or overspent amount, spending per category and per person (shared budgets), month navigation and pull to refresh. Empty state to create the first budget.
+- `ProgressBar` component (accessible progressbar) and pull to refresh in `Screen`.
 - Money helpers: cents ↔ input without floating point errors, localized currency formatting.
 - `Badge`, `LoadingScreen` and `ErrorState` components.
 - Theme tokens (light/dark) and base components: `Screen`, `ThemedText`, `TextField`, `Button`.

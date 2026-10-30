@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet } from 'react-native';
+import { KeyboardAvoidingView, Platform, RefreshControl, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/hooks/use-theme';
@@ -8,12 +8,15 @@ type ScreenProps = {
   children: ReactNode;
   /** Vertically center the content, e.g. for auth forms. */
   centered?: boolean;
+  /** Enables pull to refresh. */
+  onRefresh?: () => void;
+  isRefreshing?: boolean;
 };
 
 /**
  * Base layout for screens: safe area, keyboard avoidance and scroll.
  */
-export function Screen({ children, centered = false }: ScreenProps) {
+export function Screen({ children, centered = false, onRefresh, isRefreshing = false }: ScreenProps) {
   const theme = useTheme();
 
   return (
@@ -21,6 +24,11 @@ export function Screen({ children, centered = false }: ScreenProps) {
       <KeyboardAvoidingView style={styles.flex} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView
           keyboardShouldPersistTaps="handled"
+          refreshControl={
+            onRefresh ? (
+              <RefreshControl refreshing={isRefreshing} onRefresh={onRefresh} tintColor={theme.colors.primary} />
+            ) : undefined
+          }
           contentContainerStyle={[
             styles.content,
             centered && styles.centered,
