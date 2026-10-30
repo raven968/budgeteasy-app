@@ -17,15 +17,16 @@ export function TextField({ label, error, style, ...inputProps }: TextFieldProps
       <ThemedText variant="label">{label}</ThemedText>
       <TextInput
         accessibilityLabel={label}
-        placeholderTextColor={theme.colors.textMuted}
+        placeholderTextColor={theme.colors.baseContentMuted}
         style={[
           styles.input,
           theme.typography.body,
           {
-            color: theme.colors.text,
-            backgroundColor: theme.colors.surface,
-            borderColor: error ? theme.colors.danger : theme.colors.border,
-            borderRadius: theme.radius.md,
+            color: theme.colors.baseContent,
+            backgroundColor: theme.colors.base100,
+            borderColor: error ? theme.colors.error : theme.colors.base300,
+            borderWidth: theme.borderWidth,
+            borderRadius: theme.radius.field,
             paddingHorizontal: theme.spacing.md,
           },
           style,
@@ -33,7 +34,7 @@ export function TextField({ label, error, style, ...inputProps }: TextFieldProps
         {...inputProps}
       />
       {error ? (
-        <ThemedText variant="caption" tone="danger">
+        <ThemedText variant="caption" tone="error">
           {error}
         </ThemedText>
       ) : null}
@@ -43,7 +44,6 @@ export function TextField({ label, error, style, ...inputProps }: TextFieldProps
 
 const styles = StyleSheet.create({
   input: {
-    borderWidth: 1,
     minHeight: 48,
   },
 });

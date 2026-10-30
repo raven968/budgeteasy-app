@@ -20,7 +20,7 @@ export function SessionErrorScreen({ error }: SessionErrorScreenProps) {
       <ThemedText variant="subtitle">{t('auth.sessionError')}</ThemedText>
       <ThemedText tone="muted">{getErrorMessage(error)}</ThemedText>
       <Button title={t('common.retry')} onPress={restoreSession} />
-      <Button title={t('auth.signOut')} variant="secondary" onPress={signOut} />
+      <Button title={t('auth.signOut')} variant="outline" onPress={signOut} />
     </Screen>
   );
 }

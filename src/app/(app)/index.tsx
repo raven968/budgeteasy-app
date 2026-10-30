@@ -23,7 +23,7 @@ export default function HomeScreen() {
       {apiVersion ? (
         <ThemedText tone="muted">{t('home.apiVersion', { version: apiVersion.api_version })}</ThemedText>
       ) : null}
-      <Button title={t('auth.signOut')} variant="secondary" onPress={signOut} />
+      <Button title={t('auth.signOut')} variant="outline" onPress={signOut} />
     </Screen>
   );
 }

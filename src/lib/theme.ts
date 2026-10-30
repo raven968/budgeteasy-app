@@ -1,44 +1,56 @@
 /**
- * Design tokens. Screens and components read them through `useTheme()`; never hard-code
- * colors or spacing in components.
+ * Design tokens, modeled on daisyUI themes: "nord" (light) and "dim" (dark).
+ * Screens and components read them through `useTheme()`; never hard-code colors or spacing.
+ *
+ * Naming follows daisyUI: `base100/200/300` are layered backgrounds (100 = surfaces such as
+ * cards and inputs, 200 = screen background, 300 = borders/dividers), `*Content` is the
+ * readable color on top of its pair.
+ *
+ * Two nord colors are slightly deeper than the original theme so text keeps a WCAG AA
+ * contrast of at least 4.5:1: primary #5E81AC -> #4D6E96 and error #BF616A -> #AE4750.
  */
-const palette = {
-  green500: '#16A34A',
-  green600: '#15803D',
-  red500: '#DC2626',
-  red400: '#F87171',
-  gray50: '#F8FAFC',
-  gray100: '#F1F5F9',
-  gray300: '#CBD5E1',
-  gray500: '#64748B',
-  gray700: '#334155',
-  gray800: '#1E293B',
-  gray900: '#0F172A',
-  white: '#FFFFFF',
+const nordColors = {
+  primary: '#4D6E96',
+  primaryContent: '#ECEFF4',
+  secondary: '#81A1C1',
+  secondaryContent: '#2E3440',
+  accent: '#88C0D0',
+  accentContent: '#2E3440',
+  neutral: '#4C566A',
+  neutralContent: '#D8DEE9',
+  base100: '#ECEFF4',
+  base200: '#E5E9F0',
+  base300: '#D8DEE9',
+  baseContent: '#2E3440',
+  baseContentMuted: '#4C566A',
+  info: '#B48EAD',
+  success: '#A3BE8C',
+  warning: '#EBCB8B',
+  error: '#AE4750',
+  errorContent: '#ECEFF4',
 };
 
-const lightColors = {
-  background: palette.gray50,
-  surface: palette.white,
-  text: palette.gray900,
-  textMuted: palette.gray500,
-  border: palette.gray300,
-  primary: palette.green600,
-  primaryText: palette.white,
-  danger: palette.red500,
-};
+export type ThemeColors = typeof nordColors;
 
-export type ThemeColors = typeof lightColors;
-
-const darkColors: ThemeColors = {
-  background: palette.gray900,
-  surface: palette.gray800,
-  text: palette.gray50,
-  textMuted: palette.gray300,
-  border: palette.gray700,
-  primary: palette.green500,
-  primaryText: palette.white,
-  danger: palette.red400,
+const dimColors: ThemeColors = {
+  primary: '#9FE88D',
+  primaryContent: '#1C212B',
+  secondary: '#FF7D5C',
+  secondaryContent: '#1C212B',
+  accent: '#C792E9',
+  accentContent: '#1C212B',
+  neutral: '#1C212B',
+  neutralContent: '#B2CCD6',
+  base100: '#2A303C',
+  base200: '#242933',
+  base300: '#20252E',
+  baseContent: '#B2CCD6',
+  baseContentMuted: '#8A9BA8',
+  info: '#28EBFF',
+  success: '#62EFBD',
+  warning: '#EFD057',
+  error: '#FFAE9B',
+  errorContent: '#1C212B',
 };
 
 export const spacing = {
@@ -50,22 +62,28 @@ export const spacing = {
   xxl: 32,
 } as const;
 
+/** daisyUI radii: `field` for buttons/inputs, `box` for cards and modals. */
 export const radius = {
-  md: 10,
-  lg: 16,
+  field: 8,
+  box: 16,
+  full: 999,
 } as const;
 
+/** Border width for inputs and outlined buttons, like daisyUI's 1px `border`. */
+export const borderWidth = 1;
+
 export const typography = {
-  title: { fontSize: 28, fontWeight: '700' },
-  subtitle: { fontSize: 18, fontWeight: '600' },
+  title: { fontSize: 28, fontWeight: '800' },
+  subtitle: { fontSize: 18, fontWeight: '700' },
   body: { fontSize: 16, fontWeight: '400' },
   label: { fontSize: 14, fontWeight: '600' },
+  button: { fontSize: 16, fontWeight: '600' },
   caption: { fontSize: 13, fontWeight: '400' },
 } as const;
 
 export const themes = {
-  light: { colors: lightColors, spacing, radius, typography },
-  dark: { colors: darkColors, spacing, radius, typography },
+  light: { colors: nordColors, spacing, radius, borderWidth, typography },
+  dark: { colors: dimColors, spacing, radius, borderWidth, typography },
 };
 
 export type Theme = (typeof themes)['light'];

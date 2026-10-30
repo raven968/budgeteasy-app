@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- New look based on daisyUI's nord (light) and dim (dark) themes, with daisyUI-style tokens (`base100/200/300`, semantic colors) and a `Card` component. Two nord colors deepened to keep AA contrast.
 - Package manager switched to pnpm, with `minimumReleaseAge` of 1 day as supply-chain protection.
 
 ### Added

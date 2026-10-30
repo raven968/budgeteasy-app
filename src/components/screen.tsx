@@ -17,7 +17,7 @@ export function Screen({ children, centered = false }: ScreenProps) {
   const theme = useTheme();
 
   return (
-    <SafeAreaView style={[styles.flex, { backgroundColor: theme.colors.background }]}>
+    <SafeAreaView style={[styles.flex, { backgroundColor: theme.colors.base200 }]}>
       <KeyboardAvoidingView style={styles.flex} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView
           keyboardShouldPersistTaps="handled"

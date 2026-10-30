@@ -20,7 +20,7 @@ Mobile app (Expo SDK 58, React Native, TypeScript) for BudgetEasy: shared budget
 - Follow React best practices: function components, hooks, no business logic inside screens beyond composition, derived state over duplicated state.
 - Code is organized by feature under `src/features/<feature>/` (`api.ts`, `hooks.ts`, `components/`, `types.ts`). Routes/screens live only in `src/app/` (Expo Router). Shared code in `src/lib/` and `src/components/`.
 - Server state with TanStack Query (the auth session is the `['session']` query); forms with react-hook-form + zod, with API errors applied through `applyApiErrors`.
-- Styling with `StyleSheet` and the tokens in `src/lib/theme.ts` read via `useTheme()`; no hard-coded colors or spacing. Reuse `src/components` (`Screen`, `ThemedText`, `TextField`, `Button`).
+- Styling with `StyleSheet` and the tokens in `src/lib/theme.ts` read via `useTheme()`; no hard-coded colors or spacing. The theme follows daisyUI naming and the **nord** (light) / **dim** (dark) palettes: `base100/200/300`, `baseContent`, `primary`/`primaryContent`, `success`/`warning`/`error`, radii `field`/`box`. Keep text contrast at WCAG AA (4.5:1). Reuse `src/components` (`Screen`, `Card`, `ThemedText`, `TextField`, `Button` with `primary`/`outline`/`ghost`).
 - Routes: `src/app/(auth)` for signed-out screens, `src/app/(app)` for signed-in ones, guarded in the root layout with `Stack.Protected`.
 - File names in kebab-case (`token-storage.ts`, `update-required-screen.tsx`), as in the Expo template.
 - UI strings always go through i18next (`src/lib/i18n/locales/{es,en}.json`); never hard-code user-facing text.
