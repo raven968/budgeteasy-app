@@ -1,0 +1,18 @@
+{
+  "common": {
+    "retry": "Reintentar",
+    "loading": "Cargando…"
+  },
+  "errors": {
+    "network": "No pudimos conectar con el servidor. Revisa tu conexión.",
+    "unexpected": "Ocurrió un error inesperado. Inténtalo de nuevo."
+  },
+  "update": {
+    "title": "Actualización requerida",
+    "message": "Esta versión de BudgetEasy ({{current}}) ya no es compatible. Instala la versión {{required}} o superior para continuar."
+  },
+  "home": {
+    "appVersion": "Versión de la app: {{version}}",
+    "apiVersion": "Versión del API: {{version}}"
+  }
+}

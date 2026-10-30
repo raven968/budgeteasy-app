@@ -20,7 +20,10 @@ Mobile app (Expo SDK 58, React Native, TypeScript) for BudgetEasy: shared budget
 - Follow React best practices: function components, hooks, no business logic inside screens beyond composition, derived state over duplicated state.
 - Code is organized by feature under `src/features/<feature>/` (`api.ts`, `hooks.ts`, `components/`, `types.ts`). Routes/screens live only in `src/app/` (Expo Router). Shared code in `src/lib/` and `src/components/`.
 - Server state with TanStack Query; forms with react-hook-form + zod.
-- Always install packages with `npx expo install`. Run `npm run lint` and `npm run typecheck` before finishing a task.
+- File names in kebab-case (`token-storage.ts`, `update-required-screen.tsx`), as in the Expo template.
+- UI strings always go through i18next (`src/lib/i18n/locales/{es,en}.json`); never hard-code user-facing text.
+- Always install packages with `npx expo install` (dev tools: `npx expo install <pkg> -- --save-dev`). Run `npm run lint`, `npm run typecheck` and `npm test` before finishing a task.
+- TypeScript 6 does not load `@types/*` automatically: add new global type packages to `compilerOptions.types` in `tsconfig.json`.
 
 ## API
 

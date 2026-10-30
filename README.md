@@ -21,6 +21,7 @@ npx expo start
 ```sh
 npm run lint
 npm run typecheck
+npm test
 ```
 
 ## Versionado

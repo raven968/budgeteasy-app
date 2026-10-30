@@ -1,0 +1,18 @@
+{
+  "common": {
+    "retry": "Retry",
+    "loading": "Loading…"
+  },
+  "errors": {
+    "network": "We couldn't reach the server. Check your connection.",
+    "unexpected": "Something went wrong. Please try again."
+  },
+  "update": {
+    "title": "Update required",
+    "message": "This version of BudgetEasy ({{current}}) is no longer supported. Install version {{required}} or later to continue."
+  },
+  "home": {
+    "appVersion": "App version: {{version}}",
+    "apiVersion": "API version: {{version}}"
+  }
+}
