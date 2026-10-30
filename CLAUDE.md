@@ -29,6 +29,9 @@ Mobile app (Expo SDK 58, React Native, TypeScript) for BudgetEasy: shared budget
   - One-off tools: `pnpm dlx <tool>` (e.g. `pnpm dlx expo-doctor`, `pnpm dlx eas-cli@latest build`).
   - Run before finishing a task: `pnpm lint`, `pnpm typecheck`, `pnpm test`.
   - `pnpm-workspace.yaml` sets `minimumReleaseAge` (no versions younger than 1 day). Dependency build scripts stay blocked; approve one with `pnpm approve-builds` only if something actually breaks without it.
+- Typed routes: `pnpm typecheck` regenerates them first (`pnpm typegen` = `expo customize tsconfig.json`), so new screens type-check without starting the dev server.
+- Tests: `@testing-library/react-native` 14 is async — always `await render(...)`, `await renderHook(...)` and `await fireEvent.*(...)`. Query by accessible label/role (`getByLabelText`, `getByRole`).
+- Money input goes through `src/lib/money.ts` (`parseMoneyInput` to cents without float errors, `formatMoney` with Intl).
 - TypeScript 6 does not load `@types/*` automatically: add new global type packages to `compilerOptions.types` in `tsconfig.json`.
 
 ## API

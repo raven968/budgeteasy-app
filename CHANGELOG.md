@@ -23,4 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Unit tests with jest-expo.
 - Sign in and sign up screens with client validation (zod) and API errors shown on each field.
 - Session handling: restored from the stored token on launch, invalid tokens discarded, retry screen when the API is unreachable, sign out revokes the device token. Routes protected with `Stack.Protected`.
+- Budgets: list of owned and shared budgets, create, edit and delete (owner only), and the active budget, remembered per user on the device.
+- Home shows the active budget or an empty state to create the first one.
+- Money helpers: cents ↔ input without floating point errors, localized currency formatting.
+- `Badge`, `LoadingScreen` and `ErrorState` components.
 - Theme tokens (light/dark) and base components: `Screen`, `ThemedText`, `TextField`, `Button`.

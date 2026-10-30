@@ -1,7 +1,11 @@
 {
   "common": {
     "retry": "Retry",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save"
   },
   "errors": {
     "network": "We couldn't reach the server. Check your connection.",
@@ -22,7 +26,10 @@
     "passwordLength": "The password must be at least {{min}} characters.",
     "passwordLetters": "The password must include at least one letter.",
     "passwordNumbers": "The password must include at least one number.",
-    "passwordConfirmation": "The passwords don't match."
+    "passwordConfirmation": "The passwords don't match.",
+    "amount": "Enter a valid amount with up to 2 decimals.",
+    "amountPositive": "The amount must be greater than zero.",
+    "amountTooLarge": "The amount is too large."
   },
   "auth": {
     "login": {
@@ -45,5 +52,34 @@
     },
     "sessionError": "We couldn't verify your session.",
     "signOut": "Sign out"
+  },
+  "budgets": {
+    "title": "Budgets",
+    "new": "New budget",
+    "edit": "Edit budget",
+    "create": "Create budget",
+    "change": "Change budget",
+    "active": "Active",
+    "monthlyAmount": "{{amount}} per month",
+    "monthlyBudget": "Monthly budget",
+    "roles": {
+      "owner": "Yours",
+      "member": "Shared by {{owner}}"
+    },
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Household expenses",
+      "amount": "Monthly amount",
+      "currency": "Currency"
+    },
+    "empty": {
+      "title": "You don't have budgets yet",
+      "message": "Create one to start tracking expenses, or join someone else's with an invitation code."
+    },
+    "delete": {
+      "title": "Delete budget?",
+      "message": "\"{{name}}\" and its expenses will be deleted for all its members."
+    },
+    "summaryComingSoon": "Your monthly summary will show up here."
   }
 }
