@@ -13,6 +13,37 @@
   },
   "home": {
     "appVersion": "App version: {{version}}",
-    "apiVersion": "API version: {{version}}"
+    "apiVersion": "API version: {{version}}",
+    "greeting": "Hi, {{name}}"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address.",
+    "passwordLength": "The password must be at least {{min}} characters.",
+    "passwordLetters": "The password must include at least one letter.",
+    "passwordNumbers": "The password must include at least one number.",
+    "passwordConfirmation": "The passwords don't match."
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Keep track of the expenses you share.",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account? Sign up"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start organizing your budgets.",
+      "submit": "Create account",
+      "hasAccount": "Already have an account? Sign in"
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "passwordConfirmation": "Confirm your password"
+    },
+    "sessionError": "We couldn't verify your session.",
+    "signOut": "Sign out"
   }
 }

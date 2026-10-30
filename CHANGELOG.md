@@ -16,3 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Spanish/English translations (i18next) detected from the device language, Spanish by default.
 - TanStack Query client; forced update screen when the app is older than the API's `min_mobile_version`.
 - Unit tests with jest-expo.
+- Sign in and sign up screens with client validation (zod) and API errors shown on each field.
+- Session handling: restored from the stored token on launch, invalid tokens discarded, retry screen when the API is unreachable, sign out revokes the device token. Routes protected with `Stack.Protected`.
+- Theme tokens (light/dark) and base components: `Screen`, `ThemedText`, `TextField`, `Button`.

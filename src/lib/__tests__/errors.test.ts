@@ -2,7 +2,6 @@ import { AxiosError, AxiosHeaders } from 'axios';
 
 import { getErrorMessage, getValidationErrors } from '@/lib/api/errors';
 
-jest.mock('expo-localization', () => ({ getLocales: () => [{ languageCode: 'es' }] }));
 
 function apiError(status: number, data: unknown): AxiosError {
   const headers = new AxiosHeaders();
