@@ -54,6 +54,7 @@ export default function HomeScreen() {
         </Card>
       )}
 
+      <Button title={t('categories.manage')} variant="outline" onPress={() => router.push('/categories')} />
       <Button title={t('auth.signOut')} variant="ghost" onPress={signOut} />
     </Screen>
   );

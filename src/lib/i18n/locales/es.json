@@ -81,5 +81,49 @@
       "message": "Se eliminará \"{{name}}\" con sus gastos para todos sus miembros."
     },
     "summaryComingSoon": "Aquí verás el resumen del mes."
+  },
+  "categories": {
+    "title": "Categorías",
+    "new": "Nueva categoría",
+    "edit": "Editar categoría",
+    "create": "Crear categoría",
+    "manage": "Categorías",
+    "counter": "{{count}}/{{max}}",
+    "explanation": "Tus categorías se usan en todos tus presupuestos. En los compartidos contigo se usan las de su dueño.",
+    "empty": "Aún no tienes categorías. Crea las que más uses.",
+    "limitReached": "Llegaste al límite de {{max}} categorías. Elimina una para crear otra.",
+    "colorOption": "Color {{number}}",
+    "fields": {
+      "name": "Nombre",
+      "namePlaceholder": "Ej. Súper",
+      "icon": "Ícono",
+      "color": "Color"
+    },
+    "icons": {
+      "cart": "Súper",
+      "food": "Comida",
+      "coffee": "Café",
+      "home": "Casa",
+      "bills": "Recibos",
+      "car": "Auto",
+      "transport": "Transporte",
+      "health": "Salud",
+      "fitness": "Ejercicio",
+      "education": "Educación",
+      "entertainment": "Entretenimiento",
+      "games": "Juegos",
+      "clothes": "Ropa",
+      "gift": "Regalos",
+      "pets": "Mascotas",
+      "travel": "Viajes",
+      "phone": "Teléfono",
+      "maintenance": "Mantenimiento",
+      "card": "Tarjeta",
+      "other": "Otros"
+    },
+    "delete": {
+      "title": "¿Eliminar categoría?",
+      "message": "\"{{name}}\" dejará de estar disponible para gastos nuevos. Los gastos anteriores la conservan."
+    }
   }
 }

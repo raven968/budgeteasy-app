@@ -31,6 +31,8 @@ Mobile app (Expo SDK 58, React Native, TypeScript) for BudgetEasy: shared budget
   - `pnpm-workspace.yaml` sets `minimumReleaseAge` (no versions younger than 1 day). Dependency build scripts stay blocked; approve one with `pnpm approve-builds` only if something actually breaks without it.
 - Typed routes: `pnpm typecheck` regenerates them first (`pnpm typegen` = `expo customize tsconfig.json`), so new screens type-check without starting the dev server.
 - Tests: `@testing-library/react-native` 14 is async — always `await render(...)`, `await renderHook(...)` and `await fireEvent.*(...)`. Query by accessible label/role (`getByLabelText`, `getByRole`).
+- The React Compiler is on: use `useWatch` (not `watch()`) from react-hook-form, and avoid manual `useMemo`/`useCallback`.
+- Icons: `expo-symbols` (`SymbolView`) with per-platform names (SF Symbols on iOS, Material Symbols on Android). Category icons/colors come from `src/features/categories/catalog.ts`; the API stores the catalog key.
 - Money input goes through `src/lib/money.ts` (`parseMoneyInput` to cents without float errors, `formatMoney` with Intl).
 - TypeScript 6 does not load `@types/*` automatically: add new global type packages to `compilerOptions.types` in `tsconfig.json`.
 

@@ -81,5 +81,49 @@
       "message": "\"{{name}}\" and its expenses will be deleted for all its members."
     },
     "summaryComingSoon": "Your monthly summary will show up here."
+  },
+  "categories": {
+    "title": "Categories",
+    "new": "New category",
+    "edit": "Edit category",
+    "create": "Create category",
+    "manage": "Categories",
+    "counter": "{{count}}/{{max}}",
+    "explanation": "Your categories are used in all your budgets. Budgets shared with you use their owner's.",
+    "empty": "You don't have categories yet. Create the ones you use most.",
+    "limitReached": "You reached the limit of {{max}} categories. Delete one to create another.",
+    "colorOption": "Color {{number}}",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Groceries",
+      "icon": "Icon",
+      "color": "Color"
+    },
+    "icons": {
+      "cart": "Groceries",
+      "food": "Food",
+      "coffee": "Coffee",
+      "home": "Home",
+      "bills": "Bills",
+      "car": "Car",
+      "transport": "Transport",
+      "health": "Health",
+      "fitness": "Fitness",
+      "education": "Education",
+      "entertainment": "Entertainment",
+      "games": "Games",
+      "clothes": "Clothes",
+      "gift": "Gifts",
+      "pets": "Pets",
+      "travel": "Travel",
+      "phone": "Phone",
+      "maintenance": "Maintenance",
+      "card": "Card",
+      "other": "Other"
+    },
+    "delete": {
+      "title": "Delete category?",
+      "message": "\"{{name}}\" won't be available for new expenses. Past expenses keep it."
+    }
   }
 }
