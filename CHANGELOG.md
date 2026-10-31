@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- EAS Build setup: Android package `com.raventechnologic.budgeteasy`, `development`/`preview`/`production` profiles, remote build numbers and the production API URL as an EAS environment variable.
 - Expo SDK 58 project with Expo Router and TypeScript.
 - `app.config.ts` reading the app version from `package.json`.
 - API client (axios) with the Bearer token from SecureStore and `Accept-Language`; 401 hook for sign-out.

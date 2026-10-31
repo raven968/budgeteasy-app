@@ -15,9 +15,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   scheme: 'budgeteasy',
   userInterfaceStyle: 'automatic',
   ios: {
+    bundleIdentifier: 'com.raventechnologic.budgeteasy',
     icon: './assets/expo.icon',
   },
   android: {
+    package: 'com.raventechnologic.budgeteasy',
     adaptiveIcon: {
       backgroundColor: '#ECEFF4',
       foregroundImage: './assets/images/android-icon-foreground.png',
@@ -43,6 +45,12 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     'expo-secure-store',
     'expo-localization',
   ],
+  owner: 'raven968',
+  extra: {
+    eas: {
+      projectId: 'bf42a2f0-2835-4956-98de-2c26bba2ac6f',
+    },
+  },
   experiments: {
     typedRoutes: true,
     reactCompiler: true,

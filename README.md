@@ -24,6 +24,14 @@ pnpm typecheck
 pnpm test
 ```
 
+## Builds
+
+```sh
+pnpm dlx eas-cli@latest build --platform android --profile preview   # APK para instalar directo
+```
+
+La URL del API de las builds está en las variables de entorno de EAS, no en `.env`.
+
 ## Versionado
 
 SemVer, versión en `package.json`. Ver [CHANGELOG.md](CHANGELOG.md).
